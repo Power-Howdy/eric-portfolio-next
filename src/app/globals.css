@@ -45,3 +45,33 @@ a {
   min-height: 100vh; /* Ensure the wrapper covers the viewport */
   overflow: auto; /* Allow scrolling */
 }
+
+
+/* styles/ScrollToTopButton.module.css */
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px; /* Position from the bottom */
+  right: 30px; /* Position from the right */
+  padding: 10px 15px; /* Padding around the button */
+  background-color: #0070f3; /* Background color */
+  color: white; /* Text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 18px; /* Font size */
+  cursor: pointer; /* Cursor style */
+  opacity: 0.7; /* Semi-transparent */
+  transition: opacity 0.3s, transform 0.3s; /* Transitions for hover and visibility */
+}
+
+.scroll-to-top:hover {
+  opacity: 1; /* Fully visible on hover */
+  transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+.scroll-to-top.visible {
+  display: block; /* Show the button when visible */
+}
+
+.scroll-to-top:not(.visible) {
+  display: none; /* Hide the button when not visible */
+}

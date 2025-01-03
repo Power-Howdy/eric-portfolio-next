@@ -14,7 +14,7 @@
     justify-content: space-between;
     align-items: center;
 }
-.logo > a {
+.logo {
     display: flex;
     align-items: center;
 }
@@ -42,14 +42,13 @@
 
 .navList li {
     display: inline;
-}
-
-.navList li a {
+    cursor: pointer;
     color: #333;
-    text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.navList li a:hover {
+
+
+.navList li:hover {
     color: #0070f3; /* Change color on hover, customize as needed */
 }

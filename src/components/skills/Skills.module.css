@@ -1,0 +1,44 @@
+/* styles/Skills.module.css */
+.skillsSection {
+    padding: 50px 20px; /* Padding around the section */
+    background-color: #f9f9f9; /* Light background color */
+    width: 100vw;
+}
+
+.title {
+    text-align: center; /* Center the main title */
+    font-size: 2.5rem; /* Font size for the title */
+    margin-bottom: 40px; /* Spacing below title */
+}
+
+.skillsContainer {
+    max-width: 1200px; /* Maximum width for the container */
+    margin: 0 auto; /* Center the container */
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px; /* Space between grid items */
+}
+
+.category {
+    background-color: white; /* White background for each category */
+    padding: 20px; /* Padding within each category */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.categoryTitle {
+    font-size: 1.5rem; /* Font size for each category title */
+    margin-bottom: 15px; /* Space below category title */
+    color: #333; /* Dark text color */
+}
+
+.skillsList {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+
+.skillItem {
+    font-size: 1.1rem; /* Font size for skill items */
+    margin: 5px 0; /* Spacing between skill items */
+    color: #555; /* Mid gray text color */
+}

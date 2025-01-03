@@ -1,0 +1,40 @@
+/* styles/Hero.module.css */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); /* Gradient background */
+    color: white;
+    text-align: center; /* Center text */
+    padding: 50px; /* Padding around the content */
+    width: 100vw;
+}
+
+.content {
+    max-width: 600px; /* Limit the width of the content */
+}
+
+.title {
+    font-size: 3rem; /* Large title font size */
+    margin: 0 0 20px; /* Margin below the title */
+}
+
+.description {
+    font-size: 1.2rem; /* Smaller font size for the description */
+    margin-bottom: 30px; /* Margin below the description */
+}
+
+.button {
+    background-color: #ff6b6b; /* Button color */
+    color: white; /* Button text color */
+    padding: 15px 30px; /* Button padding */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.1rem; /* Font size for the button */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.button:hover {
+    background-color: #ff4b4b; /* Darker button color on hover */
+}

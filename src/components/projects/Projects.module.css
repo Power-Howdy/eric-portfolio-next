@@ -1,0 +1,64 @@
+/* styles/Projects.module.css */
+.projectsSection {
+    padding: 50px 20px; /* Padding around the section */
+    background-color: #f1f1f1; /* Light background color */
+    width: 100vw;
+}
+
+.title {
+    text-align: center; /* Center the main title */
+    font-size: 2.5rem; /* Font size for the title */
+    margin-bottom: 40px; /* Spacing below title */
+}
+
+.projectsContainer {
+    max-width: 1200px; /* Maximum width for the container */
+    margin: 0 auto; /* Center the container */
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px; /* Space between grid items */
+}
+
+.projectCard {
+    background-color: white; /* White background for each project card */
+    padding: 20px; /* Padding within each project card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s; /* Transition for hover animation */
+}
+
+.projectCard:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.projectTitle {
+    font-size: 1.5rem; /* Font size for project titles */
+    margin-bottom: 15px; /* Space below project titles */
+    color: #333; /* Dark text color */
+}
+
+.projectDescription {
+    font-size: 1rem; /* Font size for project descriptions */
+    margin-bottom: 15px; /* Spacing below project description */
+    color: #555; /* Mid gray text color */
+}
+
+.technologies {
+    font-size: 0.9rem; /* Smaller font size for technologies list */
+    color: #777; /* Light gray text color */
+}
+
+.projectLink {
+    background-color: #0070f3; /* Example link button color */
+    color: white; /* Link text color */
+    padding: 10px 15px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners for the button */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the link behave like a button */
+    margin-top: 10px; /* Space above the link */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.projectLink:hover {
+    background-color: #005bb5; /* Darker link button color on hover */
+}
