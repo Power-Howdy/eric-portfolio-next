@@ -13,8 +13,8 @@ export const metadata: Metadata = {
   applicationName: "Eric Haggerton Portfolio",
   keywords: "web development, nextjs, react, angular, typescript, javascript, nestjs, python, php, express, mongodb, mysql, fullstack developer, frontend developer, backend developer",
   creator: "Power-Howdy",
-  icons: "https://eric-portfolio-next.vercel.app/assets/icon.jpg",
-  twitter: { card: "summary_large_image", creator: "@coocoohive", images: "https://eric-portfolio-next.vercel.app/assets/icon.jpg" }
+  icons: "https://eric-portfolio-next.vercel.app/assets/icon.png",
+  twitter: { card: "summary_large_image", creator: "@coocoohive", images: "https://eric-portfolio-next.vercel.app/assets/icon.png" }
 };
 
 export default function RootLayout({
