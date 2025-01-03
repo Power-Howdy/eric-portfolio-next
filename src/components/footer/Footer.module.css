@@ -1,0 +1,72 @@
+/* styles/Footer.module.css */
+.footer {
+    background: linear-gradient(90deg, rgb(10, 109, 92) 0%, rgba(0, 68, 255, 0.644) 100%);
+    color: white;
+    padding: 2rem 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.logo {
+    text-align: center;
+}
+
+.nav {
+    flex: 1;
+}
+
+.navList {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Space between links */
+}
+
+.navList li {
+    text-align: center;
+}
+
+.navList li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navList li a:hover {
+    color: rgba(255, 255, 255, 0.75); /* Change color on hover */
+}
+
+.socialLinks {
+    display: flex;
+    gap: 1rem; /* Space between social links */
+}
+
+.socialLinks a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.socialLinks a:hover {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.footerBottom {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}

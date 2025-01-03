@@ -1,0 +1,55 @@
+.header {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+}
+
+.container {
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo > a {
+    display: flex;
+    align-items: center;
+}
+.logo h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    background: linear-gradient(90deg, #ff0000, #ff7f00, #744c03, #00ff00, #00ffff, #0000ff, #4b0082, #9400d3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* For Firefox */
+}
+
+
+
+.nav {
+    text-align: right;
+}
+
+.navList {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 2rem; /* Space between links */
+}
+
+.navList li {
+    display: inline;
+}
+
+.navList li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navList li a:hover {
+    color: #0070f3; /* Change color on hover, customize as needed */
+}
