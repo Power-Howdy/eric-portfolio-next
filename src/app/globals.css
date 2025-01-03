@@ -53,14 +53,15 @@ a {
   bottom: 30px; /* Position from the bottom */
   right: 30px; /* Position from the right */
   padding: 10px 15px; /* Padding around the button */
-  background-color: #0070f3; /* Background color */
+  background-color: #000; /* Background color */
   color: white; /* Text color */
   border: none; /* Remove default border */
-  border-radius: 5px; /* Rounded corners */
+  border-radius: 50%; /* Rounded corners */
   font-size: 18px; /* Font size */
   cursor: pointer; /* Cursor style */
   opacity: 0.7; /* Semi-transparent */
   transition: opacity 0.3s, transform 0.3s; /* Transitions for hover and visibility */
+  z-index: 9999;
 }
 
 .scroll-to-top:hover {

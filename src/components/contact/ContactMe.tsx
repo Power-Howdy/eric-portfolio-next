@@ -1,6 +1,23 @@
+'use client'
 import styles from './ContactMe.module.css';
-
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useEffect } from 'react';
+gsap.registerPlugin(ScrollTrigger);
 const ContactMe = () => {
+    useEffect(() => {
+        gsap.from('#contact', {
+            duration: 1,
+            y: -50, 
+            opacity: 0,
+            ease: 'expo.out',
+            scrollTrigger: {
+                trigger: '#contact',
+                start: 'top 75%',
+                toggleActions: 'play reverse play reverse'
+            },
+        });
+    })
     return (
         <section className={styles.contactSection} id='contact'>
             <h2 className={styles.title}>Contact Me</h2>

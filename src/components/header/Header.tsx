@@ -3,6 +3,7 @@ import styles from './Header.module.css';
 import logo from '@/assets/logo.png'
 import Image from 'next/image';
 import { gsap } from 'gsap';
+import { useEffect } from 'react';
 
 const Header = () => {
   
@@ -22,8 +23,55 @@ const Header = () => {
                 
         }
     };
+
+
+
+    useEffect(() => {
+      const changeHeaderBgColor = () => {
+        const scrollPos = window.scrollY;
+
+        const aboutSection = document.querySelector("#about");
+        const skillsSection = document.querySelector("#skills");
+        const projectsSection = document.querySelector("#projects");
+        const contactSection = document.querySelector("#contact");
+
+        // Check if the sections exist before accessing their properties
+        const aboutPos = aboutSection ? aboutSection.getBoundingClientRect().top + window.scrollY : 0;
+        const skillsPos = skillsSection ? skillsSection.getBoundingClientRect().top + window.scrollY : 0;
+        const projectsPos = projectsSection ? projectsSection.getBoundingClientRect().top + window.scrollY : 0;
+        const contactPos = contactSection ? contactSection.getBoundingClientRect().top + window.scrollY : 0;
+        gsap.set('.header-for-gsap', { backgroundColor: '#ffffff'});
+        gsap.set(".navlink", { color: "black" })
+        // Determine which section is currently in view
+        if(scrollPos <= aboutPos) {
+          gsap.to('.header-for-gsap', { backgroundColor: '#ffffff', duration: 0.5 });
+          gsap.to('.navlink', { color: 'black',  duration: 0.5  })
+        } else if (scrollPos > aboutPos && scrollPos < skillsPos) {
+            gsap.to('.header-for-gsap', { backgroundColor: '#ffffff77', duration: 0.5 });
+            gsap.to('.navlink', { color: 'black',  duration: 0.5  })
+        } else if (scrollPos >= skillsPos && scrollPos < projectsPos) {
+            gsap.to('.header-for-gsap', { backgroundColor: '#00000077', color: '#fff', duration: 0.5 });
+            gsap.to('.navlink', { color: 'white',  duration: 0.5  })
+        } else if (scrollPos >= projectsPos && scrollPos < contactPos) {
+            gsap.to('.header-for-gsap', { backgroundColor: '#0070f377', duration: 0.5 });
+            gsap.to('.navlink', { color: 'white',  duration: 0.5  })
+        } else if (scrollPos >= contactPos) {
+            gsap.to('.header-for-gsap', { backgroundColor: '#28a74577', duration: 0.5 });
+            gsap.to('.navlink', { color: 'white',  duration: 0.5  })
+        }
+    };
+
+      window.addEventListener('scroll', changeHeaderBgColor);
+      
+      // Cleanup the event listener on component unmount
+      return () => {
+          window.removeEventListener('scroll', changeHeaderBgColor);
+      };
+  }, []);
+
+
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} header-for-gsap`}>
       <div className={styles.container}>
         <div className={styles.logo} onClick={() => handleScrollTo("#about")}>
             <Image src={logo} width={50} height={50} alt='logo' />
@@ -31,10 +79,10 @@ const Header = () => {
         </div>
         <nav className={styles.nav}>
           <ul className={styles.navList}>
-            <li onClick={() => handleScrollTo("#about")}>Home</li>
-            <li onClick={() => handleScrollTo("#skills")}>Skills</li>
-            <li onClick={() => handleScrollTo("#projects")}>Projects</li>
-            <li onClick={() => handleScrollTo("#contact")}>Contact</li>
+            <li onClick={() => handleScrollTo("#about")} className='navlink'>Home</li>
+            <li onClick={() => handleScrollTo("#skills")} className='navlink'>Skills</li>
+            <li onClick={() => handleScrollTo("#projects")} className='navlink'>Projects</li>
+            <li onClick={() => handleScrollTo("#contact")} className='navlink'>Contact</li>
           </ul>
         </nav>
       </div>

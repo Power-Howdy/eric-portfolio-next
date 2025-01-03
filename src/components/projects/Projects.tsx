@@ -1,4 +1,9 @@
+'use client'
 import styles from './Projects.module.css';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useEffect } from 'react';
+gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
     {
@@ -64,12 +69,41 @@ const projects = [
 ];
 
 const Projects = () => {
+    useEffect(() => {
+        // Animate the title
+        gsap.from('#projects h2', {
+            duration: 1,
+            x: -50, 
+            opacity: 0,
+            ease: 'expo.out',
+            scrollTrigger: {
+                trigger: '#projects',
+                start: 'top 75%',
+                toggleActions: 'play reverse play reverse',
+            },
+        });
+        // Animate the categories and their items
+        gsap.utils.toArray('.project').forEach((project: any, index) => {
+            gsap.from(project, {
+                duration: 0.8,
+                y: 30,
+                opacity: 0,
+                ease: 'power2.out',
+                stagger: 0.2,
+                scrollTrigger: {
+                    trigger: project,
+                    start: 'top 80%', 
+                    toggleActions: 'play none none reverse',
+                },
+            });
+        });
+    })
     return (
         <section className={styles.projectsSection} id='projects'>
-            <h2 className={styles.title}>Projects</h2>
+            <h2 className={styles.title}>Recent Projects</h2>
             <div className={styles.projectsContainer}>
                 {projects.map((project, index) => (
-                    <div key={index} className={styles.projectCard}>
+                    <div key={index} className={`${styles.projectCard} project`}>
                         <h3 className={styles.projectTitle}>{project.title}</h3>
                         <p className={styles.projectDescription}>{project.description}</p>
                         <div className={styles.technologies}>

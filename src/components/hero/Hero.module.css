@@ -8,20 +8,42 @@
     text-align: center; /* Center text */
     padding: 50px; /* Padding around the content */
     width: 100vw;
+    height: calc(100vh - 80px);
+    background-image: url('/assets/hero-bg.jpg'); /* Set your background image */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent repetition of the image */
+    background-size: cover; /* Scale the image to cover the entire section */
+}
+
+.heroOverlay {
+    position: absolute; /* Position the overlay absolutely to cover the whole section */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value to control darkness */
+    z-index: 0; /* Set z-index below the content */
 }
 
 .content {
+    z-index: 1;
     max-width: 600px; /* Limit the width of the content */
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
 }
 
 .title {
     font-size: 3rem; /* Large title font size */
     margin: 0 0 20px; /* Margin below the title */
+    text-shadow: 0px 3px 0px #b2a98f,
+             0px 14px 10px rgba(0,0,0,0.15),
+             0px 24px 2px rgba(0,0,0,0.1),
+             0px 34px 30px rgba(0,0,0,0.1);
 }
 
 .description {
-    font-size: 1.2rem; /* Smaller font size for the description */
-    margin-bottom: 30px; /* Margin below the description */
+    font-size: 1.2rem;
+    margin-bottom: 30px; 
 }
 
 .button {

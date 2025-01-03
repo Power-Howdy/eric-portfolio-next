@@ -1,6 +1,6 @@
 /* styles/Footer.module.css */
 .footer {
-    background: linear-gradient(90deg, rgb(73, 42, 2) 0%, rgba(196, 119, 5, 0.692) 100%);
+    background: linear-gradient(90deg, rgb(17, 17, 17) 0%, rgba(37, 37, 36, 0.692) 100%);
     color: white;
     padding: 2rem 0;
 }
