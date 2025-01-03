@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 
 const Header = () => {
   
-    const handleScrollTo = (sectionId: any) => {
+    const handleScrollTo = (sectionId: string) => {
         // Use gsap to animate scrolling
         const section = document.querySelector(sectionId);
         if (section) {

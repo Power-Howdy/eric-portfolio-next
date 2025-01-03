@@ -51,7 +51,8 @@ const Skills = () => {
         });
 
         // Animate the categories and their items
-        gsap.utils.toArray('.category').forEach((category: any, index) => {
+        
+        gsap.utils.toArray('.category').forEach((category: any, _) => {
             gsap.from(category, {
                 duration: 0.8,
                 y: 30,

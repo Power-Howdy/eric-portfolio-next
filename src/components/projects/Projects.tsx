@@ -83,7 +83,7 @@ const Projects = () => {
             },
         });
         // Animate the categories and their items
-        gsap.utils.toArray('.project').forEach((project: any, index) => {
+        gsap.utils.toArray('.project').forEach((project: any, _) => {
             gsap.from(project, {
                 duration: 0.8,
                 y: 30,

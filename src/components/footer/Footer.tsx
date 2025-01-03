@@ -1,8 +1,6 @@
 import React from 'react'
 import styles from './Footer.module.css';
-type Props = {}
-
-function Footer({}: Props) {
+function Footer() {
   return (
     <footer className={styles.footer}>      
       <div className={styles.footerBottom}>
