@@ -4,8 +4,6 @@
     background-color: #f9f9f9; /* Light background color */
     width: 100vw;
     z-index: 1;
-    margin-top: -64px;
-    padding-top: 64px;
     background-image: url('/assets/skill-bg.png');
     background-position: right;
     background-repeat: no-repeat; 
