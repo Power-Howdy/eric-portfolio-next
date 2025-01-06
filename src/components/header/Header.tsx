@@ -3,9 +3,13 @@ import styles from './Header.module.css';
 import logo from '@/assets/logo.png'
 import Image from 'next/image';
 import { gsap } from 'gsap';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   
     const handleScrollTo = (sectionId: string) => {
         // Use gsap to animate scrolling
@@ -72,21 +76,24 @@ const Header = () => {
 
   return (
     <header className={`${styles.header} header-for-gsap`}>
-      <div className={styles.container}>
-        <div className={styles.logo} onClick={() => handleScrollTo("#about")}>
-            <Image src={logo} width={50} height={50} alt='logo' />
-            <h1>Eric Haggerton</h1>
-        </div>
-        <nav className={styles.nav}>
-          <ul className={styles.navList}>
-            <li onClick={() => handleScrollTo("#about")} className='navlink'>Home</li>
-            <li onClick={() => handleScrollTo("#skills")} className='navlink'>Skills</li>
-            <li onClick={() => handleScrollTo("#projects")} className='navlink'>Projects</li>
-            <li onClick={() => handleScrollTo("#contact")} className='navlink'>Contact</li>
-          </ul>
-        </nav>
+    <div className={styles.container}>
+      <div className={styles.logo} onClick={() => handleScrollTo("#about")}>
+        <Image src={logo} width={50} height={50} alt='logo' />
+        <h1>Eric Haggerton</h1>
       </div>
-    </header>
+      <button className={styles.menuButton} onClick={toggleMenu}>
+        <span className={`${styles.menuIcon} ${isMenuOpen ? styles.open : ''}`}></span>
+      </button>
+      <nav className={`${styles.nav} ${isMenuOpen ? styles.active : ''}`}>
+        <ul className={styles.navList}>
+          <li onClick={() => {handleScrollTo("#about"); setIsMenuOpen(false)}} className='navlink'>Home</li>
+          <li onClick={() => {handleScrollTo("#skills"); setIsMenuOpen(false)}} className='navlink'>Skills</li>
+          <li onClick={() => {handleScrollTo("#projects"); setIsMenuOpen(false)}} className='navlink'>Projects</li>
+          <li onClick={() => {handleScrollTo("#contact"); setIsMenuOpen(false)}} className='navlink'>Contact</li>
+        </ul>
+      </nav>
+    </div>
+  </header>
   );
 };
 
