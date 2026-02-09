@@ -33,19 +33,12 @@ const ContactMe = () => {
                         </a>
                     </p>
                 </div>
-                <div className={styles.contactMethod}>
-                    <h3>Skype</h3>
-                    <p>
-                        <a href="skype:live:.cid.fc34b5163bb64816?chat" className={styles.contactLink}>
-                            live:.cid.fc34b5163bb64816
-                        </a>
-                    </p>
-                </div>
+                
                 <div className={styles.contactMethod}>
                     <h3>Telegram</h3>
                     <p>
-                        <a href="https://t.me/Power_Howdy" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
-                            @Power_Howdy
+                        <a href="https://t.me/severus0004" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
+                            @severus0004
                         </a>
                     </p>
                 </div>
